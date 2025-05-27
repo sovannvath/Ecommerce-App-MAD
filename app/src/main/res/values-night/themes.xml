@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EcommerceMADWebdevelopment" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here if needed -->
+        <!-- <item name="colorPrimary">@color/your_color</item> -->
+    </style>
+
+    <style name="Theme.EcommerceMADWebdevelopment" parent="Base.Theme.EcommerceMADWebdevelopment" />
+</resources>

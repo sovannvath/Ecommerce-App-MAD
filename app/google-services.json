@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "346032929764",
+    "project_id": "mad-semester1",
+    "storage_bucket": "mad-semester1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346032929764:android:03d7bf97c80b51bafb25f1",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_mad_web_development"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBODOzvxZLHa7LU68aM6BA_rxkrLnpNgvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
