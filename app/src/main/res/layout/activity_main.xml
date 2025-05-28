@@ -277,7 +277,7 @@
                     android:id="@+id/petAccessoriesTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/pet_accessories"
+                    android:text="Pet Accessories Deals"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -288,8 +288,8 @@
                     android:id="@+id/seeAllText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/see_all"
-                    android:textColor="@android:color/black"
+                    android:text="View More >"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -312,275 +312,623 @@
                     android:orientation="horizontal"
                     android:padding="8dp">
 
-                    <LinearLayout
-                        android:layout_width="120dp"
+                    <!-- First Product Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
 
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:contentDescription="TODO"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/shirts" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingTop="4dp"
-                            android:text="$15"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            android:orientation="vertical"
+                            android:padding="8dp">
 
-                    <LinearLayout
-                        android:layout_width="120dp"
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/shirts" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Designer Sneakers"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$167,078"
+                                    android:textColor="@color/red"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="$334,155"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/red"
+                                android:padding="2dp"
+                                android:text="-50%"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:src="@drawable/ic_star" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:text="4.9"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="100+ Sold"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Second Product Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
 
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/shirts" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingTop="4dp"
-                            android:text="$20"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            android:orientation="vertical"
+                            android:padding="8dp">
 
-                    <LinearLayout
-                        android:layout_width="120dp"
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/women_skirt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Kids Shoes"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$57,768"
+                                    android:textColor="@color/red"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="$412,331"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/red"
+                                android:padding="2dp"
+                                android:text="-86%"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:src="@drawable/ic_star" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:text="5.0"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="200+ Sold"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Third Product Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
 
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/shirts" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingTop="4dp"
-                            android:text="$15"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            android:orientation="vertical"
+                            android:padding="8dp">
 
-                    <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/clothes_icon" />
 
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/shirts" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Premium Sneakers"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="4dp"
-                            android:text="$20"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$94,705"
+                                    android:textColor="@color/red"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
 
-                        <ImageView
-                            android:layout_width="120dp"
-                            android:layout_height="120dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/shirts" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="$210,456"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="4dp"
-                            android:text="$20"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/red"
+                                android:padding="2dp"
+                                android:text="-55%"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:src="@drawable/ic_star" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:text="4.7"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="150+ Sold"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <!-- Slash Prices Section -->
+            <!-- New Buyer Exclusive Section -->
             <TextView
-                android:id="@+id/slashPricesTitle"
+                android:id="@+id/newBuyerTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="SLASH PRICES :"
+                android:text="New Buyer Exclusive"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/petAccessoriesScroll" />
 
-            <LinearLayout
-                android:id="@+id/slashPricesContainer"
+            <TextView
+                android:id="@+id/newBuyerSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Up to 90% off"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newBuyerTitle" />
+
+            <HorizontalScrollView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:orientation="vertical"
+                android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/slashPricesTitle">
+                app:layout_constraintTop_toBottomOf="@+id/newBuyerSubtitle">
 
                 <LinearLayout
-                    android:id="@+id/slashItem1"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/rounded_background"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:padding="8dp">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/shirts" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <!-- Coupon Pack Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
-                        android:paddingTop="4dp"
-                        android:text="Shirts"
-                        android:textSize="14sp" />
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$19"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:gravity="center">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="2dp"
-                        android:text="$32"
-                        android:textColor="@android:color/darker_gray"
-                        android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$37,4..."
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Coupon Pack"
+                                android:textSize="12sp" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Collect"
+                                android:textSize="12sp"
+                                app:cornerRadius="16dp"
+                                app:strokeColor="@color/red"
+                                app:strokeWidth="1dp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Price Drop Cards -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
                         android:layout_height="wrap_content"
-                        android:paddingTop="4dp"
-                        android:text="SOMBA SHOES SHOP II"
-                        android:textSize="12sp" />
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$20,409"
+                                android:textColor="@color/red"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$82,008"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$20,409"
+                                android:textColor="@color/red"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="$82,425"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
+            </HorizontalScrollView>
 
-                <LinearLayout
-                    android:id="@+id/slashItem2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/rounded_background"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+            <!-- Buyer Favorite Products Section -->
+            <TextView
+                android:id="@+id/buyerFavoriteTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Buyer favorite products"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newBuyerSubtitle" />
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/women_skirt" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="4dp"
-                        android:text="WOMEN SKIRT"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="$6"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="2dp"
-                        android:text="$13"
-                        android:textColor="@android:color/darker_gray"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="4dp"
-                        android:text="Free shipping"
-                        android:textSize="12sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/slashPricesContainer2"
+            <HorizontalScrollView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:orientation="horizontal"
+                android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/slashPricesContainer">
+                app:layout_constraintTop_toBottomOf="@+id/buyerFavoriteTitle">
 
                 <LinearLayout
-                    android:id="@+id/slashItem3"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="4dp"
-                    android:background="@drawable/rounded_background"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:padding="8dp">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/shirts" />
-                </LinearLayout>
+                    <!-- Buyer Favorite Product 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
 
-                <LinearLayout
-                    android:id="@+id/slashItem4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="4dp"
-                    android:background="@drawable/rounded_background"
-                    android:orientation="vertical"
-                    android:padding="8dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/shirts" />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/shirts" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Premium Sneakers"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$108,048"
+                                    android:textColor="@color/red"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="$154,354"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/red"
+                                android:padding="2dp"
+                                android:text="-30%"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="M00: 1 Piece"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Buyer Favorite Product 2 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/women_skirt" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Kids Sneakers"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="$57,768"
+                                    android:textColor="@color/red"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:text="$412,331"
+                                    android:textColor="@color/gray"
+                                    android:textSize="12sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Save $8,329"
+                                android:textColor="@color/red"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="100% buyers rated 4+ stars"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
-            </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Curated Factories Sale Section -->
+            <TextView
+                android:id="@+id/factoriesSaleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Curated Factories Sale"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buyerFavoriteTitle" />
+
+            <TextView
+                android:id="@+id/factoriesSaleSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Direct Savings up to 50%"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/factoriesSaleTitle" />
+
+            <TextView
+                android:id="@+id/viewMoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="View More >"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/factoriesSaleSubtitle" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 
