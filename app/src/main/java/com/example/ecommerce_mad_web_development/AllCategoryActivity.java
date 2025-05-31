@@ -9,7 +9,6 @@ public class AllCategoryActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_category);
 
-        // If needed, access views from product_cart.xml here
-        // Example: TextView title = findViewById(R.id.cart_title);
+
     }
 }
