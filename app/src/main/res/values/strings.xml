@@ -1,5 +1,6 @@
 <resources>
-    <string name="search_product" >Search Products…</string>
+    <!-- Existing strings -->
+    <string name="search_product">Search Products…</string>
     <string name="all_categories">All Categories</string>
     <string name="home">Home</string>
     <string name="message">Message</string>
@@ -22,4 +23,16 @@
     <string name="signup_login_hint">Already have an account? Sign In</string>
     <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
 
+    <!-- New strings for product card -->
+    <string name="product_image">Product Image</string>
+    <string name="view_details">View Details</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="original_price">Original Price</string>
+    <string name="product_condition">Condition</string>
+    <string name="placeholder_image">Placeholder image</string>
+    <string name="error_image">Error loading image</string>
+    <string name="reviews">reviews</string>
+
+    <!-- New string for seller icon -->
+    <string name="seller_icon">Seller Icon</string>
 </resources>

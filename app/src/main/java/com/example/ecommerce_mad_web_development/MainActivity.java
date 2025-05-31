@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout navHome, navMessage, navCart, navProfile;
     FloatingActionButton navAddButton;
 
+    // Category Layouts
+    LinearLayout categoryAll, categoryPhones, categoryCars, categoryVehicles,
+            categoryClothes, categoryJobs, categoryPets;
+
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
@@ -47,9 +51,23 @@ public class MainActivity extends AppCompatActivity {
         navProfile = findViewById(R.id.navProfile);
         navAddButton = findViewById(R.id.navAddButton);
 
+        // Initialize Category Layouts
+        categoryAll = findViewById(R.id.categoryAll);
+        categoryPhones = findViewById(R.id.categoryPhones);
+        categoryCars = findViewById(R.id.categoryCars);
+        categoryVehicles = findViewById(R.id.categoryVehicles);
+        categoryClothes = findViewById(R.id.categoryClothes);
+        categoryJobs = findViewById(R.id.categoryJobs);
+        categoryPets = findViewById(R.id.categoryPets);
+
         // Check if user is logged in
         checkUserRoleAndNavigate();
 
+        // Set click listeners
+        setClickListeners();
+    }
+
+    private void setClickListeners() {
         // 🔵 Login Button
         loginBtn.setOnClickListener(view -> {
             Log.d(TAG, "Login button clicked");
@@ -63,6 +81,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Bottom Navigation Click Listeners
+        navHome.setOnClickListener(view -> {
+            Log.d(TAG, "Home button clicked");
+            // Refresh if needed
+        });
+
         navMessage.setOnClickListener(view -> {
             Log.d(TAG, "Messages button clicked");
             startActivity(new Intent(MainActivity.this, MessageActivity.class));
@@ -81,6 +104,46 @@ public class MainActivity extends AppCompatActivity {
         navAddButton.setOnClickListener(view -> {
             Log.d(TAG, "Add item button clicked");
             startActivity(new Intent(MainActivity.this, AddItemActivity.class));
+        });
+
+        // Category Click Listeners
+        setCategoryClickListeners();
+    }
+
+    private void setCategoryClickListeners() {
+        categoryAll.setOnClickListener(view -> {
+            Log.d(TAG, "All categories clicked");
+            startActivity(new Intent(MainActivity.this, AllCategoryActivity.class));
+        });
+
+        categoryPhones.setOnClickListener(view -> {
+            Log.d(TAG, "Phones & Tablets category clicked");
+            startActivity(new Intent(MainActivity.this, PhonesTabletsActivity.class));
+        });
+
+        categoryCars.setOnClickListener(view -> {
+            Log.d(TAG, "Cars category clicked");
+            startActivity(new Intent(MainActivity.this, CarsActivity.class));
+        });
+
+        categoryVehicles.setOnClickListener(view -> {
+            Log.d(TAG, "Vehicles category clicked");
+            startActivity(new Intent(MainActivity.this, VehiclesActivity.class));
+        });
+
+        categoryClothes.setOnClickListener(view -> {
+            Log.d(TAG, "Clothes category clicked");
+            startActivity(new Intent(MainActivity.this, ClothesActivity.class));
+        });
+
+        categoryJobs.setOnClickListener(view -> {
+            Log.d(TAG, "Jobs category clicked");
+            startActivity(new Intent(MainActivity.this, JobsActivity.class));
+        });
+
+        categoryPets.setOnClickListener(view -> {
+            Log.d(TAG, "Pets category clicked");
+            startActivity(new Intent(MainActivity.this, PetsActivity.class));
         });
     }
 
@@ -123,31 +186,39 @@ public class MainActivity extends AppCompatActivity {
                                 finish();
                             } else {
                                 Log.d(TAG, "Regular user flow");
-                                navAddButton.setVisibility(View.GONE);
+                                navAddButton.setVisibility(View.VISIBLE);
                             }
                         } else {
-                            Log.w(TAG, "No user data found in Firestore");
-                            Toast.makeText(this, "No user data found", Toast.LENGTH_SHORT).show();
-                            // Show login buttons if user document doesn't exist
-                            loginBtn.setVisibility(View.VISIBLE);
-                            registerBtn.setVisibility(View.VISIBLE);
+                            handleUserDataNotFound();
                         }
                     })
                     .addOnFailureListener(e -> {
-                        progressDialog.dismiss();
-                        Log.e(TAG, "Error fetching user role", e);
-                        Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
-                        // Show login buttons on error
-                        loginBtn.setVisibility(View.VISIBLE);
-                        registerBtn.setVisibility(View.VISIBLE);
+                        handleFirestoreError(e);
                     });
         } else {
-            progressDialog.dismiss();
-            Log.d(TAG, "No user signed in");
-            // User is not signed in, show login/register buttons
-            loginBtn.setVisibility(View.VISIBLE);
-            registerBtn.setVisibility(View.VISIBLE);
-            navAddButton.setVisibility(View.GONE);
+            handleNoUserSignedIn(progressDialog);
         }
+    }
+
+    private void handleUserDataNotFound() {
+        Log.w(TAG, "No user data found in Firestore");
+        Toast.makeText(this, "No user data found", Toast.LENGTH_SHORT).show();
+        loginBtn.setVisibility(View.VISIBLE);
+        registerBtn.setVisibility(View.VISIBLE);
+    }
+
+    private void handleFirestoreError(Exception e) {
+        Log.e(TAG, "Error fetching user role", e);
+        Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        loginBtn.setVisibility(View.VISIBLE);
+        registerBtn.setVisibility(View.VISIBLE);
+    }
+
+    private void handleNoUserSignedIn(ProgressDialog progressDialog) {
+        progressDialog.dismiss();
+        Log.d(TAG, "No user signed in");
+        loginBtn.setVisibility(View.VISIBLE);
+        registerBtn.setVisibility(View.VISIBLE);
+        navAddButton.setVisibility(View.GONE);
     }
 }

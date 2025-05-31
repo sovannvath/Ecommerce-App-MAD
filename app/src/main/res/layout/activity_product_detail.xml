@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Product Info Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/detailProductTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="iPhone 11 - 64GB"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#212121"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <!-- Current Price -->
+                <TextView
+                    android:id="@+id/detailProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$245"
+                    android:textColor="#E53935"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <!-- Original Price with visual treatment -->
+                <TextView
+                    android:id="@+id/detailOriginalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$320"
+                    android:textColor="#757575"
+                    android:textSize="18sp"
+                    android:layout_marginStart="8dp"
+                    android:alpha="0.7"
+                    android:background="@drawable/original_price_bg"/>
+
+                <!-- Discount percentage badge -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23% OFF"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:background="#4CAF50"
+                    android:layout_marginStart="8dp"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/detailProductCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Used - Good Condition"
+                android:textColor="#757575"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/condition_badge"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"/>
+
+            <!-- Rating -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <RatingBar
+                    android:id="@+id/productRating"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="4.5"
+                    android:stepSize="0.5"
+                    android:isIndicator="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(128 reviews)"
+                    android:textColor="#757575"
+                    android:textSize="14sp"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Seller Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:background="#F5F5F5">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_store"
+                    android:contentDescription="@string/seller_icon"/>
+
+                <TextView
+                    android:id="@+id/sellerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tech Haven"
+                    android:textSize="16sp"
+                    android:layout_marginStart="12dp"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- Product Description -->
+            <TextView
+                android:id="@+id/detailProductDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Excellent condition iPhone 11 with 92% battery health. Includes original box and charger. No scratches on screen. Fully functional with all accessories."
+                android:textSize="15sp"
+                android:textColor="#424242"
+                android:layout_marginTop="16dp"
+                android:lineSpacingMultiplier="1.3"/>
+
+            <!-- Specifications -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Specifications"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Color: Space Gray"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Storage: 64GB"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Battery Health: 92%"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Spacer for bottom button -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+    </LinearLayout>
+
+    <!-- Fixed Bottom Buy Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/contactSellerBtn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Contact Seller"
+            android:textColor="#2196F3"
+            android:background="@drawable/outline_button"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/buyNowDetailBtn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Buy Now"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_gradient"/>
+    </LinearLayout>
+</ScrollView>

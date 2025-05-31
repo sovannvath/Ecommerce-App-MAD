@@ -123,6 +123,7 @@
                     android:padding="8dp">
 
                     <LinearLayout
+                        android:id="@+id/categoryAll"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
@@ -143,6 +144,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/categoryPhones"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
@@ -163,6 +165,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/categoryCars"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
@@ -183,6 +186,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/categoryVehicles"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
@@ -203,6 +207,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/categoryClothes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
@@ -223,6 +228,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/categoryJobs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
@@ -243,6 +249,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/categoryPets"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"

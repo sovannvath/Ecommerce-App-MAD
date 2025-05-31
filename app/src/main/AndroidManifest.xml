@@ -34,6 +34,15 @@
         <activity android:name=".ClothesActivity" />
         <activity android:name=".JobsActivity" />
         <activity android:name=".PetsActivity" />
+        <activity
+            android:name=".ProductDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
 
     </application>
