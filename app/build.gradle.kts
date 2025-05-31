@@ -34,35 +34,42 @@ android {
 }
 
 dependencies {
+    // Core AndroidX libraries
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.firebase.auth)
-    implementation(libs.credentials)
-    implementation(libs.credentials.play.services.auth)
-    implementation(libs.googleid)
 
-    // CardView
+    // Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+
+    // Firebase SDKs (versions managed by BoM)
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-database")
+
+    // Google Sign-In
+    implementation("com.google.android.gms:play-services-auth:21.3.0")
+
+    // Optional: Google Identity Services (commented out)
+    // implementation("com.google.android.libraries.identity.googleid:googleid:1.1.0")
+
+    // UI Components
     implementation("androidx.cardview:cardview:1.0.0")
-
-    // Material Components (for MaterialButton)
     implementation("com.google.android.material:material:1.11.0")
 
     // Navigation Components
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
 
-    // Glide for image loading (optional but recommended)
+    // Glide for image loading
     implementation("com.github.bumptech.glide:glide:4.16.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
-    // Firebase BoM (if using other Firebase services)
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
-
-    // Circular ImageView (optional)
+    // Circular ImageView
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

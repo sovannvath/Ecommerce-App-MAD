@@ -607,6 +607,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/newBuyerTitle" />
 
             <HorizontalScrollView
+                android:id="@+id/newBuyerScroll"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -738,9 +739,10 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/newBuyerSubtitle" />
+                app:layout_constraintTop_toBottomOf="@+id/newBuyerScroll" />
 
             <HorizontalScrollView
+                android:id="@+id/buyerFavoriteScroll"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -907,7 +909,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buyerFavoriteTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/buyerFavoriteScroll" />
 
             <TextView
                 android:id="@+id/factoriesSaleSubtitle"
@@ -924,6 +926,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
                 android:text="View More >"
                 android:textColor="@color/black"
                 android:textSize="14sp"

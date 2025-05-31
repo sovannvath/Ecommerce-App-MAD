@@ -5,5 +5,11 @@
         <!-- <item name="colorPrimary">@color/your_color</item> -->
     </style>
 
-    <style name="Theme.EcommerceMADWebdevelopment" parent="Base.Theme.EcommerceMADWebdevelopment" />
+    <!-- themes.xml -->
+    <style name="Theme.EcommerceMADWebdevelopment" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- Black -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item> <!-- Dark Purple -->
+        <item name="colorAccent">@color/colorAccent</item> <!-- Pink -->
+    </style>
+
 </resources>

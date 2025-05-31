@@ -36,7 +36,10 @@ public class RegisterActivity extends Activity {
         buttonCreateAccount = findViewById(R.id.button_create_account);
 
         // Handle account creation
-        buttonCreateAccount.setOnClickListener(v -> registerUser());
+        buttonCreateAccount.setOnClickListener(v -> {
+            buttonCreateAccount.setEnabled(false); // Disable button to prevent multiple clicks
+            registerUser();
+        });
     }
 
     private void registerUser() {
@@ -48,21 +51,25 @@ public class RegisterActivity extends Activity {
         // Validate input
         if (TextUtils.isEmpty(name)) {
             editTextName.setError("Name is required");
+            buttonCreateAccount.setEnabled(true);
             return;
         }
 
         if (TextUtils.isEmpty(email)) {
             editTextEmail.setError("Email is required");
+            buttonCreateAccount.setEnabled(true);
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
             editTextPassword.setError("Password is required");
+            buttonCreateAccount.setEnabled(true);
             return;
         }
 
         if (!password.equals(confirmPassword)) {
             editTextConfirmPassword.setError("Passwords do not match");
+            buttonCreateAccount.setEnabled(true);
             return;
         }
 
@@ -71,9 +78,10 @@ public class RegisterActivity extends Activity {
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         Toast.makeText(RegisterActivity.this, "Account created successfully!", Toast.LENGTH_SHORT).show();
-                        // You can redirect to login or home activity here
+                        // Redirect to login or home activity if needed
                     } else {
                         Toast.makeText(RegisterActivity.this, "Error: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        buttonCreateAccount.setEnabled(true); // Re-enable on failure
                     }
                 });
     }

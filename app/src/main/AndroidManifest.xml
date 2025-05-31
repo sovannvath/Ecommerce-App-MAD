@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
     package="com.example.ecommerce_mad_web_development">
+
+    <!-- ✅ Add this permission here -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/Theme.EcommerceMADWebdevelopment">
+        android:theme="@style/Theme.EcommerceMADWebdevelopment"
+        android:enableOnBackInvokedCallback="true">
 
         <activity
             android:name=".MainActivity"
@@ -18,12 +21,20 @@
         </activity>
 
         <activity android:name=".LoginActivity"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MessageActivity" />
         <activity android:name=".AddItemActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".AllCategoryActivity" />
+        <activity android:name=".PhonesTabletsActivity" />
+        <activity android:name=".CarsActivity" />
+        <activity android:name=".VehiclesActivity" />
+        <activity android:name=".ClothesActivity" />
+        <activity android:name=".JobsActivity" />
+        <activity android:name=".PetsActivity" />
+
 
     </application>
 </manifest>
